@@ -27,7 +27,7 @@ public class homework20_1
       //Read the five numbers and build the linked list//
       LinkedList List = new LinkedList();
       if (in.hasNextInt()) {
-         list.head = new ListNode(in.NextInt()) //First node turns into the head//
+         list.head = new ListNode(in.NextInt()); //First node turns into the head//
          ListNode tail = list.head;
 
          //Add the next four numbers eo the end of the list//
@@ -45,7 +45,7 @@ public class homework20_1
       
       System.out.println(list.toString()); //Prints out the result//
 
-      in.close()
+      in.close();
    }
    
    public static void deleteDuplicates(LinkedList llist)
