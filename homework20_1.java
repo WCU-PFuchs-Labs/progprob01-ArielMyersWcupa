@@ -15,17 +15,54 @@ output: head-->1-->2-->3-->null
 
 Please complete the following program to fullfil the function.
 */
+/*
+* Name: Ariel Myers
+*/
+
 public class homework20_1
 {
    public static void main(String[] args)
    {
-      //add your code here
-   
+     Scanner in = new Scanner(System.in);
+      //Read the five numbers and build the linked list//
+      LinkedList List = new LinkedList();
+      if (in.hasNextInt()) {
+         list.head = new ListNode(in.NextInt()) //First node turns into the head//
+         ListNode tail = list.head;
+
+         //Add the next four numbers eo the end of the list//
+         for (int i = 1; i < 5; i++) {
+            if (in.hasNextInt()) {
+               int v = in.nextInt();
+               tail.next = new ListNode(v);
+               tail = tail.next;
+               
+            }
+         }
+      }
+      
+      deleteDuplicates(list); //Delete duplicates from the list//
+      
+      System.out.println(list.toString()); //Prints out the result//
+
+      in.close()
    }
+   
    public static void deleteDuplicates(LinkedList llist)
    {
-      //add your code here
-   }
+      ListNode current = llist.head;
+
+      //Remove repeated values//
+      while (current != null && current.next != null) {
+         if (current.value == current.next.value) {
+            //Skip the next node since it is a duplicate//
+            current.next = current.next.next;
+         } else {
+            //Move onto the next node//
+            current = current.next;
+         }
+      }
+   } 
 
 }
 
