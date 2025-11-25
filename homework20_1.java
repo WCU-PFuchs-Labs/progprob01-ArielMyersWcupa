@@ -18,6 +18,7 @@ Please complete the following program to fullfil the function.
 /*
 * Name: Ariel Myers
 */
+import java.util.Scanner;
 
 public class homework20_1
 {
